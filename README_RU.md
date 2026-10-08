@@ -83,6 +83,9 @@ Joji
 
 ## Быстрый старт
 
+**Подключение YouTube Music без DevTools:** [расширение для Chrome / Chromium](extension/README.md).
+В личном чате с ботом отправь `/youtube_connect`, затем введи сервер и код в расширении.
+
 ```bash
 cp .env.example .env        # заполнить BOT_TOKEN, FERNET_KEY
 docker compose up --build

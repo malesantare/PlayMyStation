@@ -16,6 +16,7 @@ from app.core.metrics import (
     http_requests_total,
     render_metrics,
 )
+from app.web.browser_connect import router as browser_connect_router
 from app.web.oauth import router as oauth_router
 
 log = logging.getLogger("playmystation.web")
@@ -58,6 +59,7 @@ def create_web_app() -> FastAPI:
         raise RuntimeError("WEBHOOK_SECRET is required in webhook mode")
     app = FastAPI(title="PlayMyStation OAuth", lifespan=lifespan)
     app.include_router(oauth_router)
+    app.include_router(browser_connect_router)
 
     @app.middleware("http")
     async def metrics_middleware(request: Request, call_next):  # type: ignore[no-untyped-def]

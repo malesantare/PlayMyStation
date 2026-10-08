@@ -83,6 +83,9 @@ all automatic, in background, best-effort.
 
 ## Quick start
 
+**Connect YouTube Music without DevTools:** [Chrome / Chromium extension](extension/README.md).
+Send `/youtube_connect` in a private chat with the bot, then enter the server and code in the extension.
+
 ```bash
 cp .env.example .env        # fill in BOT_TOKEN, FERNET_KEY
 docker compose up --build
